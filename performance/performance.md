@@ -48,6 +48,11 @@ Op-code caching stores a compiled copy of every PHP script in the server's memor
 Op-code caching can make web servers use fewer resources when running WordPress; however, like with full page caching, op-code caching can cause changes to WordPress, such as installing or removing plugins and themes or updating WordPress, from showing up right away. It can be useful to manually purge the op-code cache after making any changes to the PHP files that make up WordPress.
 
 ### Fragment Caching
+This is the way of caching smaller elements of non-cacheable dynamic website content. When Web pages containing static and/or dynamic content are loaded, hosting servers process PHP code and query MySQL databases to fetch the requested content. These time-and-resource consuming processes are circumvented by delivering the desired output stored as a cached copy.
+
+Fragment caching stores a result (HTML output) of some code blocks that remain unchanged across varied versions of the dynamic content. When the code runs and reaches the code block cached for a predetermined time, the server queries and delivers the cached output of this code instead of executing it repeatedly, until the time limit reaches.
+
+The end result is a cache-optimized website content for maximum page speed even for ecommerce and membership-based websites handling intensely dynamic content. 
 
 ## Content Distribution Network (CDN)
 Content distribution networks are made up of global endpoints that can provide caching closer to the end user. Caching items at physical locations closer to the end user improve performance and latency by decreasing the round-trip network time. Examples of items that can be cached by a CDN are static assets (CSS< JavaScript, and images), REST API responses, and full page cache responses.
